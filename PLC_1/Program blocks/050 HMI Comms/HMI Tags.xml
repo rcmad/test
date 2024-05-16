@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="ControlAutoSelect" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ControlAutoStart" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ControlAutoStop" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="AutoRunning" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ResetAlarms" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="Select Input" Datatype="Struct" Remanence="Retain">
+      <Member Name="Input 1" Datatype="Int">
+        <StartValue>1</StartValue>
+      </Member>
+      <Member Name="Input 2" Datatype="Int">
+        <StartValue>10</StartValue>
+      </Member>
+      <Member Name="Input 3" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 4" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 5" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 6" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 7" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 8" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 9" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 10" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 11" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 12" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 13" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 14" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+    </Member>
+    <Member Name="Selected Input" Datatype="Struct" Remanence="Retain">
+      <Member Name="Input 1" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 2" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 3" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 4" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 5" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 6" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 7" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 8" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 9" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 10" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 11" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 12" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 13" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="Input 14" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+    </Member>
+    <Member Name="Select Output" Datatype="Struct" Remanence="Retain">
+      <Member Name="output 1" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 2" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 3" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 4" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 5" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 6" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 7" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 8" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 9" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 10" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+    </Member>
+    <Member Name="Selected Output" Datatype="Struct" Remanence="Retain">
+      <Member Name="output 1" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 2" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 3" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 4" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 5" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 6" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 7" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 8" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 9" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+      <Member Name="output 10" Datatype="Int">
+        <StartValue>0</StartValue>
+      </Member>
+    </Member>
+    <Member Name="LinePressure" Datatype="&quot;AnalogScale&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="AnalogMin" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="AnalogMax" Datatype="Int">
+            <StartValue>27648</StartValue>
+          </Member>
+          <Member Name="ScaledMIN" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledMax" Datatype="Real">
+            <StartValue>11.0</StartValue>
+          </Member>
+          <Member Name="ScaledSensor" Datatype="Real">
+            <StartValue>0.06127026</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="BufferLevel" Datatype="&quot;AnalogScale&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="AnalogMin" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="AnalogMax" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="ScaledMIN" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledMax" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledSensor" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="SpareAN1" Datatype="&quot;AnalogScale&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="AnalogMin" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="AnalogMax" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="ScaledMIN" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledMax" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledSensor" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="SpareAN2" Datatype="&quot;AnalogScale&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="AnalogMin" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="AnalogMax" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="ScaledMIN" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledMax" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="ScaledSensor" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="CoolOverRunValue" Datatype="Time" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>T#1M</StartValue>
+    </Member>
+    <Member Name="Pump_Control" Datatype="&quot;VFD_Control&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="NameplateSpeed" Datatype="Real">
+            <StartValue>710.0</StartValue>
+          </Member>
+          <Member Name="AutoSpeedSP" Datatype="Real">
+            <StartValue>50.0</StartValue>
+          </Member>
+          <Member Name="DriveIsRunning" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ActualSpeed" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="AxisActive" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="LockoutActive" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ErrorPResent" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="HMI_VFD_Fault" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="HMI_Error_Present" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="VFDFaultCode" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="MotorState" Datatype="Int">
+            <StartValue>0</StartValue>
+          </Member>
+          <Member Name="Actual_Current" Datatype="Real">
+            <StartValue>0.0007141113</StartValue>
+          </Member>
+          <Member Name="Actual_torque" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Peak_Current" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Peak_torque" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ResetMotorFault" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="LinePressureMin" Datatype="Real" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="LinePressureMax" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="LinePressureSP" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="Manual Run Motor" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ModeOneShot" Datatype="Bool" Remanence="Retain">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ModeRepeat" Datatype="Bool" Remanence="Retain">
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="ModeOneShotTime" Datatype="Bool" Remanence="Retain">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ModeRepeatTime" Datatype="Bool" Remanence="Retain">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ModeContinous" Datatype="Bool" Remanence="Retain">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="StartDose" Datatype="Bool">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="Required Dose" Datatype="Real" Remanence="Retain">
+      <StartValue>1000.0</StartValue>
+    </Member>
+    <Member Name="InflightVal" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="CalcDose" Datatype="Real" Remanence="Retain">
+      <StartValue>1000.0</StartValue>
+    </Member>
+    <Member Name="DoseTime" Datatype="Time" Remanence="Retain">
+      <StartValue>T#0MS</StartValue>
+    </Member>
+    <Member Name="IntervalTime" Datatype="Time" Remanence="Retain">
+      <StartValue>T#5S</StartValue>
+    </Member>
+    <Member Name="IBC" Datatype="&quot;Valve&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="ManOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="FeebackFitted" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisClosed" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveAngle" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="FeedbackFaultTime" Datatype="Time">
+            <StartValue>T#0MS</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Flowmeter" Datatype="&quot;Valve&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ManOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="FeebackFitted" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisClosed" Datatype="Bool">
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="ValveAngle" Datatype="Real">
+            <StartValue>90.0</StartValue>
+          </Member>
+          <Member Name="FeedbackFaultTime" Datatype="Time">
+            <StartValue>T#0MS</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Dose" Datatype="&quot;Valve&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ManOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="FeebackFitted" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisClosed" Datatype="Bool">
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="ValveAngle" Datatype="Real">
+            <StartValue>90.0</StartValue>
+          </Member>
+          <Member Name="FeedbackFaultTime" Datatype="Time">
+            <StartValue>T#0MS</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Pump" Datatype="&quot;Valve&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ManOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="FeebackFitted" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisOpen" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveisClosed" Datatype="Bool">
+            <StartValue>FALSE</StartValue>
+          </Member>
+          <Member Name="ValveAngle" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="FeedbackFaultTime" Datatype="Time">
+            <StartValue>T#0MS</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WriteLogs" Datatype="Bool" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="alarms" Datatype="DWord">
+      <StartValue>16#0000_0000</StartValue>
+    </Member>
+    <Member Name="MinimumLinePressure" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="MaximumLinePressure" Datatype="Real" Remanence="Retain">
+      <StartValue>12.0</StartValue>
+    </Member>
+    <Member Name="SystemEnables" Datatype="Struct" Remanence="Retain">
+      <Member Name="Flowmeter Fitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="LinePressureFitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="FlowmeterTemperatureFitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="IBCFitted" Datatype="Bool">
+        <StartValue>FALSE</StartValue>
+      </Member>
+      <Member Name="IBCValveFitted" Datatype="Bool">
+        <StartValue>FALSE</StartValue>
+      </Member>
+      <Member Name="FlowmeterValveFitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="Buffer LevelFitted" Datatype="Bool">
+        <StartValue>FALSE</StartValue>
+      </Member>
+      <Member Name="PumpValveFitted" Datatype="Bool">
+        <StartValue>FALSE</StartValue>
+      </Member>
+      <Member Name="DoseValveFitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="ForcedCoolingFitted" Datatype="Bool">
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="BufferValveFitted" Datatype="Bool">
+        <StartValue>FALSE</StartValue>
+      </Member>
+    </Member>
+    <Member Name="TemperatureLowSP" Datatype="Real" Remanence="Retain">
+      <StartValue>15.0</StartValue>
+    </Member>
+    <Member Name="TemperatureHighSP" Datatype="Real" Remanence="Retain">
+      <StartValue>30.0</StartValue>
+    </Member>
+    <Member Name="BufferHopperMinLVL" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="BufferHopperMaxLVL" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="BufferHopperLVLSP" Datatype="Real" Remanence="Retain">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="HMISettingsLock" Datatype="Bool" Remanence="Retain">
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="DoseState" Datatype="Int">
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="DoseWaiting" Datatype="Time" Remanence="Retain">
+      <StartValue>T#5S</StartValue>
+    </Member>
+    <Member Name="FMActualCount" Datatype="Real">
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="DoseActTime" Datatype="Time">
+      <StartValue>T#0MS</StartValue>
+    </Member>
+    <Member Name="FmTemperature" Datatype="Real">
+      <StartValue>17.8934</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>HMI Tags</Name>
+      <Namespace />
+      <Number>72</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

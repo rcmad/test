@@ -1,0 +1,3112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Digital_IN</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Safety OK" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 1" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Safety OK</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="DOL Running Feedback" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 2" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DOl Running</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="IBC Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 3" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>IBC Valve Open</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="IBC Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 4" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>IBC Valve closed</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Pump Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 5" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Pump Feed Valve is Open</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Pump Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 6" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Pump Feed Valve is Closed</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Flowmeter Feed Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 7" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Flometer Feed Valve is Open</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 8" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Flowmerter Feed Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 8" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Flowmerter Feed Valve is Closed</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 9" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Dose Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 9" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Dosing Valve is Open</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="30" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 10" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Dose Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 10" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="33" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Dosing Valve is Closed</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Spare 11" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 11" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 12" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Spare 12" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 12" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="3D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 13" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Spare 13" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 13" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="40" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="42" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="44" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DI 0.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DI 0.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DI 0.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DI 0.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DI 0.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DI 0.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DI 0.6" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DI 0.7" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DI 1.0" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DI 1.1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DI 1.2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DI 1.3" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DI 1.4" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DI 1.5" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Select Input" />
+        <Component Name="Input 14" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Spare 14" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Selected Input" />
+        <Component Name="Input 14" />
+      </Symbol>
+    </Access>
+    <Call UId="38">
+      <CallInfo Name="Assign Input" BlockType="FC">
+        <Parameter Name="Input1" Section="Input" Type="Bool" />
+        <Parameter Name="Input2" Section="Input" Type="Bool" />
+        <Parameter Name="Input3" Section="Input" Type="Bool" />
+        <Parameter Name="Input4" Section="Input" Type="Bool" />
+        <Parameter Name="Input5" Section="Input" Type="Bool" />
+        <Parameter Name="Input6" Section="Input" Type="Bool" />
+        <Parameter Name="Input7" Section="Input" Type="Bool" />
+        <Parameter Name="Input8" Section="Input" Type="Bool" />
+        <Parameter Name="Input9" Section="Input" Type="Bool" />
+        <Parameter Name="Input10" Section="Input" Type="Bool" />
+        <Parameter Name="Input11" Section="Input" Type="Bool" />
+        <Parameter Name="Input12" Section="Input" Type="Bool" />
+        <Parameter Name="Input13" Section="Input" Type="Bool" />
+        <Parameter Name="Input14" Section="Input" Type="Bool" />
+        <Parameter Name="InputSelection" Section="Input" Type="Int" />
+        <Parameter Name="Out" Section="Output" Type="Bool" />
+        <Parameter Name="InputSelected" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="38" Name="Input1" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="22" />
+      <NameCon UId="38" Name="Input2" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="23" />
+      <NameCon UId="38" Name="Input3" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="Input4" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="Input5" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="Input6" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="27" />
+      <NameCon UId="38" Name="Input7" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="Input8" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="Input9" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="30" />
+      <NameCon UId="38" Name="Input10" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="31" />
+      <NameCon UId="38" Name="Input11" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="32" />
+      <NameCon UId="38" Name="Input12" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="33" />
+      <NameCon UId="38" Name="Input13" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="34" />
+      <NameCon UId="38" Name="Input14" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="35" />
+      <NameCon UId="38" Name="InputSelection" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="38" Name="Out" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="InputSelected" />
+      <IdentCon UId="37" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="45" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="49" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="4E" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4F" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

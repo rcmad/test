@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Flowmeter Diag</Name>
+      <Namespace />
+      <Number>10</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FmMassFlow_Sts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="MassFlowDiag" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FmVolume Flow_Sts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="FmVolume Flow STS" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FmCorrectedVolumeFlowSts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="FmCorrectedVolumeFlow Sts" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FMDensitySts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="FMDensity Sts" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FMReferenceDensitySts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="FMReferenceDensity Sts" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="Flowmeter Fitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="FMTemperatureSts" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23" />
+    <Call UId="24">
+      <CallInfo Name="FmStsCodes" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="25">
+          <Component Name="FMTemperature Sts" />
+        </Instance>
+        <Parameter Name="StsIn" Section="Input" Type="Byte" />
+        <Parameter Name="Maint alarm" Section="Output" Type="Bool" />
+        <Parameter Name="Process Issue" Section="Output" Type="Bool" />
+        <Parameter Name="Function Check" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Initial val" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Maint demand" Section="Output" Type="Bool" />
+        <Parameter Name="Uncertain Process Related" Section="Output" Type="Bool" />
+        <Parameter Name="Ok" Section="Output" Type="Bool" />
+        <Parameter Name="OK maint advised" Section="Output" Type="Bool" />
+        <Parameter Name="OK function Check" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StsIn" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="24" Name="Maint alarm" />
+      <OpenCon UId="26" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="24" Name="Process Issue" />
+      <OpenCon UId="27" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="24" Name="Function Check" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="24" Name="Uncertain Initial val" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="43">
+      <NameCon UId="24" Name="Uncertain Maint demand" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="24" Name="Uncertain Process Related" />
+      <OpenCon UId="31" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="24" Name="Ok" />
+      <OpenCon UId="32" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="24" Name="OK maint advised" />
+      <OpenCon UId="33" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="24" Name="OK function Check" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="26" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="27" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>FmControl</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Totalise" Datatype="Bool" />
+    <Member Name="Stop &amp; Reset Count" Datatype="Bool" />
+    <Member Name="Stop &amp; Preset Value" Datatype="Bool" />
+    <Member Name="reset and totalise" Datatype="Bool" />
+    <Member Name="Reset  &amp; Restart" Datatype="Bool" />
+    <Member Name="Preset and Start" Datatype="Bool" />
+    <Member Name="Hold" Datatype="Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="FmTotaliserControl" Datatype="Byte" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static" />
+</Sections></Interface>
+      <Name>FmControl_DB</Name>
+      <Namespace />
+      <Number>26</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

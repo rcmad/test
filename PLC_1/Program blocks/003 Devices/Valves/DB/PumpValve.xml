@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>Valve_Type</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Auto_OPN" Datatype="Bool" />
+    <Member Name="ManOpen" Datatype="Bool" />
+    <Member Name="FeedbackFitted" Datatype="Bool" />
+    <Member Name="FeedbackTime" Datatype="Time" />
+    <Member Name="Close_Feedback" Datatype="Bool" />
+    <Member Name="Open_Feedback" Datatype="Bool" />
+    <Member Name="Global_Reset" Datatype="Bool" />
+    <Member Name="Simulation" Datatype="Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Valve Open" Datatype="Bool" />
+    <Member Name="HMI Valve Open" Datatype="Bool" />
+    <Member Name="HMI Valve Close" Datatype="Bool" />
+    <Member Name="Valve Open Fault" Datatype="Bool" />
+    <Member Name="Valve Close Fault" Datatype="Bool" />
+  </Section>
+  <Section Name="InOut">
+    <Member Name="Valve Angle" Datatype="Real" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="IEC_Timer_0_Instance" Datatype="TON_TIME" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="IEC_Timer_0_Instance_1" Datatype="TON_TIME" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="trig 1" Datatype="Bool" />
+    <Member Name="trig 2" Datatype="Bool" />
+  </Section>
+</Sections></Interface>
+      <Name>PumpValve</Name>
+      <Namespace />
+      <Number>17</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

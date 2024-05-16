@@ -1,0 +1,243 @@
+﻿FUNCTION_BLOCK "SINA_SPEED_TLG352"
+TITLE = Speed control S7 to SINAMICS using Standardtelegram 352
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : SIEMENS
+FAMILY : DRIVES
+NAME : SINA_SPD_TLG352
+VERSION : 1.0
+//The function block SINA_SPEED_TLG352 controls a SINAMICS drive using SIEMENS telegram 352
+   VAR_INPUT 
+      enableAxis : Bool;   // 0 -> 1 = Enable the drive (OFF2 / OFF 3 are 1 in default status) (OFF1 = 0->1)
+      ackError : Bool;   // 0 -> 1 = Acknowledge drive error
+      speedSp : Real;   // Speed setpoint [rpm]
+      userPZD1 : Word;   // User PZD1
+      userPZD2 : Word;   // User PZD2
+      userPZD3 : Word;   // User PZD3
+      userPZD4 : Word;   // User PZD4
+      refSpeed : Real;   // Reference speed [p2000] in [rpm]
+      refCurrent : Real;   // Reference current [p2002] in [Aeff]
+      refTorque : Real;   // Reference torque [p2003] in [Nm]
+      configAxis : Word := 16#003F;   // binary programmed input to control all functions in the telegram without its own function block input
+      HWIDSTW : HW_IO;   // Hardware Identifer set point slot
+      HWIDZSW : HW_IO;   // Hardware Identifer actual value slot
+   END_VAR
+
+   VAR_OUTPUT 
+      axisEnabled : Bool;   // 1 = Drive is enabled
+      lockout : Bool;   // 1 = Drive lockout active
+      actSpeed : Real;   // Smoothed actual speed in [1/min]
+      actCurrent : Real;   // Smoothed current actual in [Arms]
+      actTorque : Real;   // Actual smoothed torque in [Nm]
+      warnCode : UInt;   // Warn code of the drive
+      faultCode : UInt;   // Fault code of the drive
+      error : Bool;   // 1 = Error (FB and Infeed)
+      status : Int;   // Status output (7002 = FB in operation; 7xxx = warning; 8xxx = error description - read the manual)
+      diagId : Int;   // Error codes of the system function blocks DPWR / DPRD_DAT
+   END_VAR
+
+   VAR_TEMP 
+      tempSpeed : Real;   // Speed setpoint in percent
+      tempRefValueInvalid : Bool;   // At least one reference value is or < 0
+      tempSendBuf : Array[0..5] of Word;   // Send buffer
+      tempRecvBuf : Array[0..5] of Word;   // Receive buffer
+   END_VAR
+
+   VAR CONSTANT 
+      NORMALIZATION_VALUE : Int := 16#4000;   // Used to calculate the Real values
+      MAX_INT : Int := 16#7FFF;
+      MIN_INT : Int := 16#8000;
+      NO_ERROR : Int := 16#7002;   // No error
+      REF_CURRRENT_INVALID : Int := 16#7010;   // RefCurrent input is 0 or < 0
+      REF_TORQUE_INVALID : Int := 16#7011;   // RefTorque input is 0 or < 0
+      REF_VALUES_INVALID : Int := 16#7013;   // Multiple reference values are 0 or < 0
+      WARNING_WARN_CODE : Int := 16#7005;   // warnCode is not 0
+      REF_SPEED_INVALID : Int := 16#8001;   // RefSpeed input is 0 or < 0
+      ERROR_DRIVE : Int := 16#8401;   // Drive error
+      ERROR_LOCKOUT : Int := 16#8402;   // Drive lockout
+      ERROR_DPREAD : Int := 16#8600;   // DPRD_DAT returned an error
+      ERROR_DPWRITE : Int := 16#8601;   // DPWR_DAT returned an error
+      ERROR_FAULT_CODE : Int := 16#8800;   // faultCode is not 0
+      STW1 : USInt := 0;
+      ZSW1 : USInt := 0;
+      NSOLL_A : USInt := 1;
+   END_VAR
+
+
+BEGIN
+	//=============================================================================
+	//SIEMENS AG
+	//(c)Copyright 2019 All Rights Reserved
+	//-----------------------------------------------------------------------------
+	// Library:       LSINAExt
+	// Tested with:   SIMATIC S7 CPU 1513-1 PN V2.5
+	// Engineering:   TIA Portal V15
+	// Restrictions:  -
+	// Requirements:  S7-1200 / S7-1500
+	// Functionality: cyclic communication between a SINAMICS a PLC.
+	//                If in HWConfig SIEMENS telegram 352 are projected 6 PZD-words are exchanged
+	//                in every bus cycle.
+	//                The parametrisation of these words is described in the manual of the
+	//                SINAMICS
+	//-----------------------------------------------------------------------------
+	//Change log table:
+	//Version  Date       Expert in charge Changes applied
+	//01.00.00 11.02.2019 (AS) First released version
+	//=============================================================================
+	
+	// Prepare PZD1 (STW1)
+	#tempSendBuf[#STW1].%X0 := #enableAxis;
+	#tempSendBuf[#STW1].%X7 := #ackError;
+	#tempSendBuf[#STW1].%X1 := #configAxis.%X0;
+	#tempSendBuf[#STW1].%X2 := #configAxis.%X1;
+	#tempSendBuf[#STW1].%X3 := #configAxis.%X2;
+	#tempSendBuf[#STW1].%X4 := #configAxis.%X3;
+	#tempSendBuf[#STW1].%X5 := #configAxis.%X4;
+	#tempSendBuf[#STW1].%X6 := #configAxis.%X5;
+	#tempSendBuf[#STW1].%X11 := #configAxis.%X6;
+	#tempSendBuf[#STW1].%X13 := #configAxis.%X7;
+	#tempSendBuf[#STW1].%X14 := #configAxis.%X8;
+	#tempSendBuf[#STW1].%X10 := TRUE; // control by PLC
+	
+	// Speed
+	IF #refSpeed > 0 THEN
+	    #tempSpeed := #speedSp * (#NORMALIZATION_VALUE / #refSpeed);
+	    // Limit REAL - Variable to INT - limits
+	    IF #tempSpeed > #MAX_INT THEN
+	        #tempSpeed := #MAX_INT;
+	    ELSIF #tempSpeed < #MIN_INT THEN
+	        #tempSpeed := #MIN_INT;
+	    ELSE
+	        ; // not needed
+	    END_IF;
+	    #tempSendBuf[#NSOLL_A] := INT_TO_WORD(REAL_TO_INT(#tempSpeed));
+	ELSE
+	    #error := TRUE;
+	    #status := #REF_SPEED_INVALID;
+	    #tempSendBuf[#NSOLL_A] := W#16#0;
+	END_IF;
+	
+	#tempSendBuf[2] := #userPZD1;
+	#tempSendBuf[3] := #userPZD2;
+	#tempSendBuf[4] := #userPZD3;
+	#tempSendBuf[5] := #userPZD4;
+	
+	// Send telegram to drive
+	#diagId := DPWR_DAT(LADDR := #HWIDSTW,
+	                    RECORD := #tempSendBuf);
+	
+	// Error when writing the telegram
+	IF #diagId <> 0 THEN
+	    #error := TRUE;
+	    #status := #ERROR_DPWRITE;
+	    
+	    // Reset outputs
+	    #actSpeed := 0.0;
+	    #actCurrent := 0.0;
+	    #actTorque := 0.0;
+	    #warnCode := 0;
+	    #faultCode := 0;
+	    
+	    RETURN;
+	ELSE
+	    ;
+	END_IF;
+	
+	// Receive telegram from drive
+	#diagId := DPRD_DAT(LADDR := #HWIDZSW,
+	                    RECORD => #tempRecvBuf);
+	
+	// Error when reading the telegram
+	IF #diagId <> 0 THEN
+	    #error := TRUE;
+	    #status := #ERROR_DPREAD;
+	    
+	    // Reset outputs
+	    #actSpeed := 0.0;
+	    #actCurrent := 0.0;
+	    #actTorque := 0.0;
+	    #warnCode := 0;
+	    #faultCode := 0;
+	    
+	    RETURN;
+	ELSE
+	    ;
+	END_IF;
+	
+	// Analyse ZSW1
+	#axisEnabled := #tempRecvBuf[#ZSW1].%X2;
+	#lockout := #tempRecvBuf[#ZSW1].%X6;
+	#error := #tempRecvBuf[#ZSW1].%X3 OR #tempRecvBuf[#ZSW1].%X6;
+	
+	IF #tempRecvBuf[#ZSW1].%X3 THEN
+	    #status := #ERROR_DRIVE;
+	ELSIF #tempRecvBuf[#ZSW1].%X6 THEN
+	    #status := #ERROR_LOCKOUT;
+	ELSE
+	    #status := #NO_ERROR;
+	END_IF;
+	
+	// Actual speed
+	IF (#refSpeed <= 0)
+	    AND #enableAxis
+	THEN
+	    #actSpeed := 0.0;
+	    #error := TRUE;
+	    #status := #REF_SPEED_INVALID;
+	ELSE
+	    #actSpeed := INT_TO_REAL(WORD_TO_INT(#tempRecvBuf[1])) / (#NORMALIZATION_VALUE / #refSpeed);
+	END_IF;
+	
+	// Actual current
+	IF (#refCurrent <= 0)
+	    AND #enableAxis
+	    AND NOT #error
+	THEN
+	    #actCurrent := 0.0;
+	    
+	    IF #tempRefValueInvalid THEN
+	        #status := #REF_VALUES_INVALID;
+	    ELSE
+	        #status := #REF_CURRRENT_INVALID;
+	        #tempRefValueInvalid := TRUE;
+	    END_IF;
+	ELSE
+	    #actCurrent := INT_TO_REAL(WORD_TO_INT(#tempRecvBuf[2])) / (#NORMALIZATION_VALUE / #refCurrent);
+	END_IF;
+	
+	// Actual torque
+	IF (#refTorque <= 0)
+	    AND #enableAxis
+	    AND NOT #error
+	THEN
+	    #actTorque := 0.0;
+	    
+	    IF #tempRefValueInvalid THEN
+	        #status := #REF_VALUES_INVALID;
+	    ELSE
+	        #status := #REF_TORQUE_INVALID;
+	        #tempRefValueInvalid := TRUE;
+	    END_IF;
+	ELSE
+	    #actTorque := INT_TO_REAL(WORD_TO_INT(#tempRecvBuf[3])) / (#NORMALIZATION_VALUE / #refTorque);
+	END_IF;
+	
+	// Warn code
+	#warnCode := WORD_TO_UINT(#tempRecvBuf[4]);
+	IF #warnCode <> 0
+	    AND NOT #error
+	THEN
+	    #status := #WARNING_WARN_CODE;
+	ELSE
+	    ;
+	END_IF;
+	
+	// Fault code
+	#faultCode := WORD_TO_UINT(#tempRecvBuf[5]);
+	IF #faultCode <> 0 THEN
+	    #error := TRUE;
+	    #status := #ERROR_FAULT_CODE;
+	ELSE
+	    ;
+	END_IF;
+END_FUNCTION_BLOCK
+

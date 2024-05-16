@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="NameplateSpeed" Datatype="Real" />
+    <Member Name="AutoSpeedSP" Datatype="Real" />
+    <Member Name="DriveIsRunning" Datatype="Bool" />
+    <Member Name="ActualSpeed" Datatype="Real" />
+    <Member Name="AxisActive" Datatype="Bool" />
+    <Member Name="LockoutActive" Datatype="Bool" />
+    <Member Name="ErrorPResent" Datatype="Bool" />
+    <Member Name="HMI_VFD_Fault" Datatype="Int" />
+    <Member Name="HMI_Error_Present" Datatype="Bool" />
+    <Member Name="VFDFaultCode" Datatype="Int" />
+    <Member Name="MotorState" Datatype="Int" />
+    <Member Name="Actual_Current" Datatype="Real" />
+    <Member Name="Actual_torque" Datatype="Real" />
+    <Member Name="Peak_Current" Datatype="Real" />
+    <Member Name="Peak_torque" Datatype="Real" />
+  </Section>
+</Sections></Interface>
+      <Name>VFD_Control</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

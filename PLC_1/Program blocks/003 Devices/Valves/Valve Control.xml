@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Valve Control</Name>
+      <Namespace />
+      <Number>5</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="IBCValveFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="OpenIBCValve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="ManOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="FeebackFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="FeedbackFaultTime" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="IBC Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="IBC Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="FaultReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="Simulation" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="ValveAngle" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DQ" />
+        <Component Name="CMD Open IBC Valve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="ValveisOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="IBC" />
+        <Component Name="ValveisClosed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="IBCVLVOpnFLT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="IBCVLVClsFLT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Call UId="37">
+      <CallInfo Name="Valve_Type" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="38">
+          <Component Name="IBCValve" />
+        </Instance>
+        <Parameter Name="Auto_OPN" Section="Input" Type="Bool" />
+        <Parameter Name="ManOpen" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackFitted" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackTime" Section="Input" Type="Time" />
+        <Parameter Name="Close_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Open_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Global_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="Simulation" Section="Input" Type="Bool" />
+        <Parameter Name="Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Close" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Open Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Close Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Angle" Section="InOut" Type="Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="Auto_OPN" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="ManOpen" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="FeedbackFitted" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="FeedbackTime" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="Close_Feedback" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="Open_Feedback" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="Global_Reset" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="37" Name="Simulation" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="37" Name="Valve Angle" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="Valve Open" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="HMI Valve Open" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="37" Name="HMI Valve Close" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="Valve Open Fault" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="Valve Close Fault" />
+      <IdentCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>IBC Valve Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="FlowmeterValveFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="OpenFlowmeterValve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="ManOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="FeebackFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="FeedbackFaultTime" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Flowmerter Feed Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Flowmeter Feed Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="FaultReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="Simulation" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="ValveAngle" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DQ" />
+        <Component Name="CMD Open Flowmeter Feed Valve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="ValveisOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Flowmeter" />
+        <Component Name="ValveisClosed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="FlVLVOpnFLT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="FlVLVClsFLT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Call UId="37">
+      <CallInfo Name="Valve_Type" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="38">
+          <Component Name="FlowmeterValve" />
+        </Instance>
+        <Parameter Name="Auto_OPN" Section="Input" Type="Bool" />
+        <Parameter Name="ManOpen" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackFitted" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackTime" Section="Input" Type="Time" />
+        <Parameter Name="Close_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Open_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Global_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="Simulation" Section="Input" Type="Bool" />
+        <Parameter Name="Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Close" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Open Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Close Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Angle" Section="InOut" Type="Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="Auto_OPN" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="ManOpen" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="FeedbackFitted" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="FeedbackTime" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="Close_Feedback" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="Open_Feedback" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="Global_Reset" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="37" Name="Simulation" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="37" Name="Valve Angle" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="Valve Open" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="HMI Valve Open" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="37" Name="HMI Valve Close" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="Valve Open Fault" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="Valve Close Fault" />
+      <IdentCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Flowmeter Valve Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="DoseValveFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="OpenDoseValve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="ManOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="FeebackFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="FeedbackFaultTime" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Dose Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Dose Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="FaultReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="Simulation" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="ValveAngle" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DQ" />
+        <Component Name="CMD Opend Dosing Valve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="ValveisOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Dose" />
+        <Component Name="ValveisClosed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DoseVLVOpnFLT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DoseVLVClsFLT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Call UId="37">
+      <CallInfo Name="Valve_Type" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="38">
+          <Component Name="doseValve" />
+        </Instance>
+        <Parameter Name="Auto_OPN" Section="Input" Type="Bool" />
+        <Parameter Name="ManOpen" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackFitted" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackTime" Section="Input" Type="Time" />
+        <Parameter Name="Close_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Open_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Global_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="Simulation" Section="Input" Type="Bool" />
+        <Parameter Name="Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Close" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Open Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Close Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Angle" Section="InOut" Type="Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="Auto_OPN" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="ManOpen" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="FeedbackFitted" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="FeedbackTime" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="Close_Feedback" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="Open_Feedback" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="Global_Reset" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="37" Name="Simulation" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="37" Name="Valve Angle" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="Valve Open" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="HMI Valve Open" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="37" Name="HMI Valve Close" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="Valve Open Fault" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="Valve Close Fault" />
+      <IdentCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Dose Valve Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="SystemEnables" />
+        <Component Name="PumpValveFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="OpenPumpValve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="ManOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="FeebackFitted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="FeedbackFaultTime" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Pump Valve is Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DI" />
+        <Component Name="Pump Valve is Open" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="FaultReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="Simulation" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="ValveAngle" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="IO Mapping" />
+        <Component Name="DQ" />
+        <Component Name="CMD Open Pump Feed Valve" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="ValveisOpen" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="HMI Tags" />
+        <Component Name="Pump" />
+        <Component Name="ValveisClosed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="PumpVLVOpnFLT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="PumpVLVClsFLT" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Call UId="37">
+      <CallInfo Name="Valve_Type" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="38">
+          <Component Name="PumpValve" />
+        </Instance>
+        <Parameter Name="Auto_OPN" Section="Input" Type="Bool" />
+        <Parameter Name="ManOpen" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackFitted" Section="Input" Type="Bool" />
+        <Parameter Name="FeedbackTime" Section="Input" Type="Time" />
+        <Parameter Name="Close_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Open_Feedback" Section="Input" Type="Bool" />
+        <Parameter Name="Global_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="Simulation" Section="Input" Type="Bool" />
+        <Parameter Name="Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Open" Section="Output" Type="Bool" />
+        <Parameter Name="HMI Valve Close" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Open Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Close Fault" Section="Output" Type="Bool" />
+        <Parameter Name="Valve Angle" Section="InOut" Type="Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="39">
+      <Powerrail />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="Auto_OPN" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="ManOpen" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="FeedbackFitted" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="FeedbackTime" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="26" />
+      <NameCon UId="37" Name="Close_Feedback" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="Open_Feedback" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="Global_Reset" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="37" Name="Simulation" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="37" Name="Valve Angle" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="Valve Open" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="HMI Valve Open" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="37" Name="HMI Valve Close" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="Valve Open Fault" />
+      <IdentCon UId="34" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="37" Name="Valve Close Fault" />
+      <IdentCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Pump Valve Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="1C" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="1D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

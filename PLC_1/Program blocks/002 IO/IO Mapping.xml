@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="DI" Datatype="Struct">
+      <Member Name="Safety OK" Datatype="Bool" />
+      <Member Name="IBC Valve is Open" Datatype="Bool" />
+      <Member Name="IBC Valve is Closed" Datatype="Bool" />
+      <Member Name="Pump Valve is Open" Datatype="Bool" />
+      <Member Name="Pump Valve is Closed" Datatype="Bool" />
+      <Member Name="Flowmeter Feed Valve is Open" Datatype="Bool" />
+      <Member Name="Flowmerter Feed Valve is Closed" Datatype="Bool" />
+      <Member Name="Dose Valve is Open" Datatype="Bool" />
+      <Member Name="Dose Valve is Closed" Datatype="Bool" />
+      <Member Name="DOL Running Feedback" Datatype="Bool" />
+      <Member Name="Spare 11" Datatype="Bool" />
+      <Member Name="Spare 12" Datatype="Bool" />
+      <Member Name="Spare 13" Datatype="Bool" />
+      <Member Name="Spare 14" Datatype="Bool" />
+    </Member>
+    <Member Name="DQ" Datatype="Struct">
+      <Member Name="CMD Open IBC Valve" Datatype="Bool" />
+      <Member Name="CMD Open Pump Feed Valve" Datatype="Bool" />
+      <Member Name="CMD Open Flowmeter Feed Valve" Datatype="Bool" />
+      <Member Name="CMD Opend Dosing Valve" Datatype="Bool" />
+      <Member Name="Run Motor Cooling" Datatype="Bool" />
+      <Member Name="Spare 6" Datatype="Bool" />
+      <Member Name="Spare 7" Datatype="Bool" />
+      <Member Name="Spare 8" Datatype="Bool" />
+      <Member Name="Spare 9" Datatype="Bool" />
+      <Member Name="Spare 10" Datatype="Bool" />
+    </Member>
+    <Member Name="AI" Datatype="Struct">
+      <Member Name="Line Pressure" Datatype="Int" />
+      <Member Name="Buffer level" Datatype="Int" />
+      <Member Name="Spare 1" Datatype="Int" />
+      <Member Name="Spare 2" Datatype="Int" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>IO Mapping</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
