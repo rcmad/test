@@ -103,33 +103,49 @@
         <Component Name="Simulate" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="22">
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="Simulate" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23">
       <Negated Name="operand" />
     </Part>
-    <Call UId="23">
+    <Part Name="Contact" UId="24">
+      <Negated Name="operand" />
+    </Part>
+    <Call UId="25">
       <CallInfo Name="Analog_IN" BlockType="FC" />
     </Call>
-    <Call UId="24">
+    <Call UId="26">
       <CallInfo Name="Digital_IN" BlockType="FC" />
     </Call>
-    <Call UId="25">
+    <Call UId="27">
       <CallInfo Name="Digital_OUT" BlockType="FC" />
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="26">
-      <Powerrail />
-      <NameCon UId="22" Name="in" />
-    </Wire>
-    <Wire UId="27">
-      <IdentCon UId="21" />
-      <NameCon UId="22" Name="operand" />
-    </Wire>
     <Wire UId="28">
-      <NameCon UId="22" Name="out" />
-      <NameCon UId="23" Name="en" />
-      <NameCon UId="24" Name="en" />
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="30">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="24" Name="out" />
       <NameCon UId="25" Name="en" />
+      <NameCon UId="26" Name="en" />
+      <NameCon UId="27" Name="en" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
